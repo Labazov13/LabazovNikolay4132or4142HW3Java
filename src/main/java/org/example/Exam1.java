@@ -1,12 +1,6 @@
 package org.example;
-
-
 import java.util.Scanner;
-
 //Реализовать алгоритм сортировки слиянием
-                            // 2,3,5,1,5,4
-                            // 0,7,8,9,5,4
-
 public class Exam1 {
     public static int [] mergeSort(int [] array1, int [] array2){
         int [] resultArray = new int[array1.length + array2.length];
@@ -39,11 +33,8 @@ public class Exam1 {
             }
             indexResultArray++;
         }
-
         return resultArray;
     }
-
-
     public static int [] bubleSorting(int [] array){
         int temp = 0;
         for(int i = 0;i < array.length; i++){
@@ -57,14 +48,15 @@ public class Exam1 {
         }
         return array;
     }
-
-
     public static int [] generateArray(){
         int countElementToArray1 = 0;
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите количество элементов массива ");
         if(sc.hasNextInt()){
             countElementToArray1 = sc.nextInt();
+        }
+        else{
+            System.out.println("Введенный символ не является числом");
         }
         int [] array = new int[countElementToArray1];
         for(int i = 0; i < array.length; i++){
